@@ -1,0 +1,33 @@
+$main-color: #C9C9C9;
+$font-size: 11px;
+$star-size: 12px;
+
+.star,
+.votes,
+.average {
+    color: $main-color;
+}
+
+.votes {
+    font-size: $font-size;
+}
+
+.average {
+    font-size: $font-size;
+}
+
+.css-reverse {
+    direction: rtl;
+    float: left;
+    margin-right: 8px;
+}
+
+.star {
+    font-size: $star-size;
+    padding-right: 2px;
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: gold;
+}

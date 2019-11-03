@@ -1,0 +1,76 @@
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+h1 {
+    font-size: $font-size + 1.5em;
+    margin: 0;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.row {
+    margin: $row-space 0;
+}
+
+.title {
+    font-weight: $strong-weight;
+}
+
+.prices {
+    font-weight: $strong-weight;
+    margin-top: $row-space * 2;
+}
+
+.price {
+    color: $color-new-price;
+    margin-right: 10px;
+}
+
+.oldPrice {
+    color: $color-old-price;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.discount {
+    color: $color-discount;
+}
+
+.newTag {
+    font-size: $font-size - 0.3em;
+    font-weight: $strong-weight;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    border-radius: $radius;
+    padding: 5px 40px;
+}
+
+.selected-color {
+    font-size: $font-size - 0.3em;
+}
+
+.pieces,
+.button {
+    font-size: $font-size - .2em;
+    font-weight: $strong-weight;
+    padding: 1.2em;
+    height: 4em;
+}
+
+.pieces {
+    width: 6em;;
+    min-width: 2em;
+    border: 1px solid black;
+    border-radius: 2em;
+    margin-right: 10px;
+}
+
+.button {
+    border: 0;
+    line-height: 0;
+    max-width: 300px;
+}

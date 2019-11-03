@@ -1,0 +1,63 @@
+
+/*
+* Nastavenie tvaru a proporcii farebných variant produktu
+*/
+$colors-size: 34px;
+$colors-space: 3px;
+$colors-radius: 50%;
+
+/*
+* Premenné fariebných variant produktu
+*/
+$black: black;
+$white: white;
+$red: #DC382F;
+$blue: #1956A6;
+$yellow: #F6ED34;
+$purple: #665DA9;
+
+/*
+* Prekonvertovanie farieb pre slučku v súbore "_loops.scss"
+*/
+$colors: (
+    čierna: $black,
+    biela: $white,
+    červená: $red,
+    modrá: $blue,
+    žltá: $yellow,
+    fialová: $purple
+);
+
+/*
+* Vytvorenie farebných variant
+*/
+.select-color {
+    @each $key, $val in $colors {
+        &[name="#{$key}"] {
+            background-color: $val;
+        }
+    }
+}
+
+.select-color {
+    width: $colors-size;
+    height: $colors-size;
+    display: inline-block;
+    margin-right: 15px;
+    border-radius: $colors-radius;
+    position: relative;
+    border: 1px solid transparent;
+    &[name="biela"] {
+        border: 1px solid #000;
+    }
+    &.active:before {
+        content: '';
+        width: $colors-size + 2 + ($colors-space * 2);
+        height: $colors-size + 2 + ($colors-space * 2);
+        position: absolute;
+        top: -2px - $colors-space;
+        left: -2px - $colors-space;
+        border: 1px solid #777;
+        border-radius: $colors-radius;
+    }
+}
